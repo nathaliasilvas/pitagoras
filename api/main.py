@@ -1,10 +1,14 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS, cross_origin
 import math
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route("/calculator", methods=["GET"])
+@cross_origin()
 def set_name():
     a = request.args.to_dict().get("a")
     b = request.args.to_dict().get("b")
