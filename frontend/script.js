@@ -1,4 +1,5 @@
-function handleCalculate() {
+function handleCalculate(e) {
+    e.preventDefault()
     const a = document.querySelector('#a').value
     const b = document.querySelector('#b').value
 
@@ -14,3 +15,5 @@ async function calculate(a, b) {
 
     return data.json()
 }
+
+document.querySelector('#calculator').addEventListener('submit', handleCalculate)
