@@ -4,8 +4,9 @@ function handleCalculate(e) {
     const b = document.querySelector('#b').value
 
     calculate(a, b).then((response) => {
-        document.querySelector('#result-span').innerHTML = response.result ?? 0
-        document.querySelector('#result').classList.remove('d-none')
+        const result = document.querySelector('#result-span')
+        result.innerHTML = response.result ?? 0
+        result.parentElement.parentElement.classList.remove('d-none')
     })
 }
 

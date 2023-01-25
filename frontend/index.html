@@ -8,50 +8,62 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/css/style.css">
 </head>
 <body>
-<div class="container">
-    <div class="text-center mt-5">
-        <h1>
-            Calculadora de Pitágoras
-        </h1>
-    </div>
+<div class="background">
+    <div class="container pt-5">
+        <div class="text-center">
+            <h1 class="title">
+                Calculadora de Pitágoras
+            </h1>
+        </div>
 
-    <div class="row justify-content-center">
-        <div class="col col-10 col-md-6">
-            <div class="justify-content-center mt-5">
-                <form id="calculator">
-                    <div class="input-group">
-                        <input class="form-control" id="a" min="1" placeholder="a:" required type="number">
-                        <input class="form-control" id="b" min="1" placeholder="b:" required type="number">
-                        <button class="btn btn-success" type="submit">Calcular</button>
-                    </div>
+        <div class="row justify-content-center">
+            <div class="col col-10 col-md-6">
+                <div class="justify-content-center mt-5">
+                    <form id="calculator">
+                        <div class="input-group">
+                            <input class="form-control" id="a" min="1" placeholder="a:" required
+                                   type="number">
+                            <input class="form-control" id="b" min="1" placeholder="b:" required
+                                   type="number">
+                            <button class="btn btn-success" type="submit">Calcular</button>
+                        </div>
 
-                    <div class="mt-3 h-50">
-                        <p class="text-center d-none" id="result">
-                            Resultado: <span id="result-span">0</span>
-                        </p>
-                    </div>
-                </form>
+                        <div class="result mt-3">
+                            <div class="d-none box">
+                                <p class="text-center">
+                                    Resultado: <span id="result-span">0</span>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="text-center mt-5">
-        <a href="https://brasilescola.uol.com.br/matematica/teorema-pitagoras.htm" target="_blank">
-            <img
-                    alt="Imagem ilustrativa da fórmula de Pitágoras"
-                    src="https://s4.static.brasilescola.uol.com.br/img/2018/09/pitagoras-be.jpeg"
-                    style="max-width: 80vw"
-                    title="Imagem retirada do blog post do site Brasil Escola"
-                    width="600">
-        </a>
+        <div class="text-center">
+            <a href="https://brasilescola.uol.com.br/matematica/teorema-pitagoras.htm" target="_blank">
+                <img
+                        alt="Imagem ilustrativa da fórmula de Pitágoras"
+                        class="img"
+                        src="https://s4.static.brasilescola.uol.com.br/img/2018/09/pitagoras-be.jpeg"
+                        style="max-width: 80vw"
+                        title="Imagem retirada do blog post do site Brasil Escola">
+            </a>
+        </div>
     </div>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-<script src="script.js"></script>
+<script src="dist/js/script.js"></script>
 </body>
 </html>
