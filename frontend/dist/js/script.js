@@ -11,8 +11,12 @@ function handleCalculate(e) {
 }
 
 async function calculate(a, b) {
+    const baseUrl = document.location.hostname === 'nathysilva.pythonanywhere.com'
+        ? `https://${document.location.hostname}`
+        : 'http://localhost:5000'
+
     const params = new URLSearchParams({ a, b })
-    const data = await fetch(`http://localhost:5000/calculator?${params}`)
+    const data = await fetch(`${baseUrl}/calculator?${params}`)
 
     return data.json()
 }
