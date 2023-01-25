@@ -9,7 +9,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/calculator", methods=["GET"])
 @cross_origin()
-def set_name():
+def calculator():
     a = request.args.to_dict().get("a")
     b = request.args.to_dict().get("b")
 
